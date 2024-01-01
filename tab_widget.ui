@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>Form</class>
- <widget class="QWidget" name="Form">
+ <class>mail_reader_form</class>
+ <widget class="QWidget" name="mail_reader_form">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -15,7 +15,7 @@
   </property>
   <layout class="QGridLayout" name="gridLayout">
    <item row="0" column="0">
-    <widget class="QTabWidget" name="tabWidget">
+    <widget class="QTabWidget" name="main_tab_widget">
      <property name="maximumSize">
       <size>
        <width>780</width>
@@ -29,7 +29,7 @@
      <property name="currentIndex">
       <number>0</number>
      </property>
-     <widget class="QWidget" name="tab">
+     <widget class="QWidget" name="mail_reader_tab_widget">
       <property name="enabled">
        <bool>true</bool>
       </property>
@@ -45,11 +45,11 @@
          <height>23</height>
         </rect>
        </property>
-       <layout class="QGridLayout" name="gridLayout_3">
+       <layout class="QGridLayout" name="mail_list_label_layout">
         <item row="1" column="0">
-         <widget class="QLabel" name="label">
+         <widget class="QLabel" name="mail_list_label">
           <property name="text">
-           <string>Mail list:</string>
+           <string>E-mail:</string>
           </property>
          </widget>
         </item>
@@ -64,9 +64,9 @@
          <height>261</height>
         </rect>
        </property>
-       <layout class="QGridLayout" name="gridLayout_5">
+       <layout class="QGridLayout" name="mail_list_layout">
         <item row="0" column="0">
-         <widget class="QListWidget" name="listWidget"/>
+         <widget class="QListWidget" name="mail_list_widget"/>
         </item>
        </layout>
       </widget>
@@ -75,41 +75,46 @@
         <rect>
          <x>139</x>
          <y>40</y>
-         <width>381</width>
+         <width>371</width>
          <height>261</height>
         </rect>
        </property>
-       <layout class="QGridLayout" name="gridLayout_6">
+       <layout class="QGridLayout" name="mail_content_layout">
         <item row="0" column="0">
-         <widget class="QPlainTextEdit" name="plainTextEdit"/>
+         <widget class="QPlainTextEdit" name="mail_content_text_edit">
+          <property name="enabled">
+           <bool>true</bool>
+          </property>
+          <property name="inputMethodHints">
+           <set>Qt::ImhNone</set>
+          </property>
+          <property name="readOnly">
+           <bool>true</bool>
+          </property>
+         </widget>
         </item>
        </layout>
-      </widget>
-      <widget class="QWidget" name="gridLayoutWidget_2">
-       <property name="geometry">
-        <rect>
-         <x>80</x>
-         <y>0</y>
-         <width>31</width>
-         <height>31</height>
-        </rect>
-       </property>
-       <layout class="QGridLayout" name="gridLayout_2"/>
       </widget>
       <widget class="QWidget" name="verticalLayoutWidget">
        <property name="geometry">
         <rect>
          <x>200</x>
          <y>10</y>
-         <width>271</width>
+         <width>311</width>
          <height>22</height>
         </rect>
        </property>
-       <layout class="QVBoxLayout" name="verticalLayout">
+       <layout class="QVBoxLayout" name="mail_title_content_layout">
         <item>
-         <widget class="QLineEdit" name="lineEdit">
+         <widget class="QLineEdit" name="mail_title_content_line_edit">
+          <property name="enabled">
+           <bool>true</bool>
+          </property>
           <property name="text">
            <string/>
+          </property>
+          <property name="readOnly">
+           <bool>true</bool>
           </property>
          </widget>
         </item>
@@ -124,11 +129,46 @@
          <height>21</height>
         </rect>
        </property>
-       <layout class="QVBoxLayout" name="verticalLayout_2">
+       <layout class="QVBoxLayout" name="mail_title_layout">
         <item>
-         <widget class="QLabel" name="label_2">
+         <widget class="QLabel" name="mail_title_label">
           <property name="text">
-           <string>Subject:</string>
+           <string>Titre:</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="gridLayoutWidget_2">
+       <property name="geometry">
+        <rect>
+         <x>100</x>
+         <y>10</y>
+         <width>21</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <layout class="QGridLayout" name="refresh_button_layout">
+        <property name="horizontalSpacing">
+         <number>4</number>
+        </property>
+        <property name="verticalSpacing">
+         <number>5</number>
+        </property>
+        <item row="0" column="0">
+         <widget class="QPushButton" name="refresh_button">
+          <property name="enabled">
+           <bool>true</bool>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset>
+            <normaloff>Images/refresh_icon.svg</normaloff>Images/refresh_icon.svg</iconset>
+          </property>
+          <property name="shortcut">
+           <string/>
           </property>
          </widget>
         </item>

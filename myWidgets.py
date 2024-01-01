@@ -9,7 +9,6 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
-from pprint import pp
 
 class Ui_Form(object):
     
@@ -138,4 +137,98 @@ class Ui_Form(object):
         self.content = []
         self.mail_subject = []
     
-    
+
+
+
+class Ui_mail_reader_form(object):
+    def setupUi(self, mail_reader_form):
+        mail_reader_form.setObjectName("mail_reader_form")
+        mail_reader_form.resize(547, 354)
+        self.main_tab_widget = QtWidgets.QTabWidget(mail_reader_form)
+        self.main_tab_widget.setMaximumSize(QtCore.QSize(780, 400))
+        self.main_tab_widget.setStyleSheet("background-color: rgb(255, 255, 255);\n"
+"")
+        self.main_tab_widget.setObjectName("main_tab_widget")
+        self.mail_reader_tab_widget = QtWidgets.QWidget()
+        self.mail_reader_tab_widget.setEnabled(True)
+        self.mail_reader_tab_widget.setObjectName("mail_reader_tab_widget")
+        self.gridLayoutWidget = QtWidgets.QWidget(self.mail_reader_tab_widget)
+        self.gridLayoutWidget.setGeometry(QtCore.QRect(10, 10, 40, 23))
+        self.gridLayoutWidget.setObjectName("gridLayoutWidget")
+        self.mail_list_label_layout = QtWidgets.QGridLayout(self.gridLayoutWidget)
+        self.mail_list_label_layout.setContentsMargins(0, 0, 0, 0)
+        self.mail_list_label_layout.setObjectName("mail_list_label_layout")
+        self.mail_list_label = QtWidgets.QLabel(self.gridLayoutWidget)
+        self.mail_list_label.setObjectName("mail_list_label")
+        self.mail_list_label_layout.addWidget(self.mail_list_label, 1, 0, 1, 1)
+        self.gridLayoutWidget_3 = QtWidgets.QWidget(self.mail_reader_tab_widget)
+        self.gridLayoutWidget_3.setGeometry(QtCore.QRect(10, 40, 111, 261))
+        self.gridLayoutWidget_3.setObjectName("gridLayoutWidget_3")
+        self.mail_list_layout = QtWidgets.QGridLayout(self.gridLayoutWidget_3)
+        self.mail_list_layout.setContentsMargins(0, 0, 0, 0)
+        self.mail_list_layout.setObjectName("mail_list_layout")
+        self.mail_list_widget = QtWidgets.QListWidget(self.gridLayoutWidget_3)
+        self.mail_list_widget.setObjectName("mail_list_widget")
+        self.mail_list_layout.addWidget(self.mail_list_widget, 0, 0, 1, 1)
+        self.gridLayoutWidget_4 = QtWidgets.QWidget(self.mail_reader_tab_widget)
+        self.gridLayoutWidget_4.setGeometry(QtCore.QRect(139, 40, 371, 261))
+        self.gridLayoutWidget_4.setObjectName("gridLayoutWidget_4")
+        self.mail_content_layout = QtWidgets.QGridLayout(self.gridLayoutWidget_4)
+        self.mail_content_layout.setContentsMargins(0, 0, 0, 0)
+        self.mail_content_layout.setObjectName("mail_content_layout")
+        self.mail_content_text_edit = QtWidgets.QPlainTextEdit(self.gridLayoutWidget_4)
+        self.mail_content_text_edit.setEnabled(True)
+        self.mail_content_text_edit.setInputMethodHints(QtCore.Qt.ImhNone)
+        self.mail_content_text_edit.setReadOnly(True)
+        self.mail_content_text_edit.setObjectName("mail_content_text_edit")
+        self.mail_content_layout.addWidget(self.mail_content_text_edit, 0, 0, 1, 1)
+        self.verticalLayoutWidget = QtWidgets.QWidget(self.mail_reader_tab_widget)
+        self.verticalLayoutWidget.setGeometry(QtCore.QRect(200, 10, 311, 22))
+        self.verticalLayoutWidget.setObjectName("verticalLayoutWidget")
+        self.mail_title_content_layout = QtWidgets.QVBoxLayout(self.verticalLayoutWidget)
+        self.mail_title_content_layout.setContentsMargins(0, 0, 0, 0)
+        self.mail_title_content_layout.setObjectName("mail_title_content_layout")
+        self.mail_title_content_line_edit = QtWidgets.QLineEdit(self.verticalLayoutWidget)
+        self.mail_title_content_line_edit.setEnabled(True)
+        self.mail_title_content_line_edit.setText("")
+        self.mail_title_content_line_edit.setReadOnly(True)
+        self.mail_title_content_line_edit.setObjectName("mail_title_content_line_edit")
+        self.mail_title_content_layout.addWidget(self.mail_title_content_line_edit)
+        self.verticalLayoutWidget_2 = QtWidgets.QWidget(self.mail_reader_tab_widget)
+        self.verticalLayoutWidget_2.setGeometry(QtCore.QRect(140, 10, 51, 21))
+        self.verticalLayoutWidget_2.setObjectName("verticalLayoutWidget_2")
+        self.mail_title_layout = QtWidgets.QVBoxLayout(self.verticalLayoutWidget_2)
+        self.mail_title_layout.setContentsMargins(0, 0, 0, 0)
+        self.mail_title_layout.setObjectName("mail_title_layout")
+        self.mail_title_label = QtWidgets.QLabel(self.verticalLayoutWidget_2)
+        self.mail_title_label.setObjectName("mail_title_label")
+        self.mail_title_layout.addWidget(self.mail_title_label)
+        self.gridLayoutWidget_2 = QtWidgets.QWidget(self.mail_reader_tab_widget)
+        self.gridLayoutWidget_2.setGeometry(QtCore.QRect(100, 10, 21, 21))
+        self.gridLayoutWidget_2.setObjectName("gridLayoutWidget_2")
+        self.refresh_button_layout = QtWidgets.QGridLayout(self.gridLayoutWidget_2)
+        self.refresh_button_layout.setContentsMargins(0, 0, 0, 0)
+        self.refresh_button_layout.setHorizontalSpacing(4)
+        self.refresh_button_layout.setVerticalSpacing(5)
+        self.refresh_button_layout.setObjectName("refresh_button_layout")
+        self.refresh_button = QtWidgets.QPushButton(self.gridLayoutWidget_2)
+        self.refresh_button.setEnabled(True)
+        self.refresh_button.setText("")
+        icon = QtGui.QIcon()
+        icon.addPixmap(QtGui.QPixmap("Images/refresh_icon.svg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.refresh_button.setIcon(icon)
+        self.refresh_button.setShortcut("")
+        self.refresh_button.setObjectName("refresh_button")
+        self.refresh_button_layout.addWidget(self.refresh_button, 0, 0, 1, 1)
+        self.main_tab_widget.addTab(self.mail_reader_tab_widget, "")
+
+        self.retranslateUi(mail_reader_form)
+        self.main_tab_widget.setCurrentIndex(0)
+        QtCore.QMetaObject.connectSlotsByName(mail_reader_form)
+
+    def retranslateUi(self, mail_reader_form):
+        _translate = QtCore.QCoreApplication.translate
+        mail_reader_form.setWindowTitle(_translate("mail_reader_form", "Form"))
+        self.mail_list_label.setText(_translate("mail_reader_form", "E-mail:"))
+        self.mail_title_label.setText(_translate("mail_reader_form", "Titre:"))
+        self.main_tab_widget.setTabText(self.main_tab_widget.indexOf(self.mail_reader_tab_widget), _translate("mail_reader_form", "Messagerie"))

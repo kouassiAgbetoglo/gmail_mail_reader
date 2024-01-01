@@ -14,7 +14,7 @@ class MainUI(QMainWindow):
         loadUi("mail_gui.ui", self)        
         self.setFixedSize(535, 380)
         # binding action to menu action to create read and send mail tab
-        self.actionRead_mail.triggered.connect(self.read_mail_pressed)
+        self.Messagerie.triggered.connect(self.read_mail_pressed)
         #self.actionSend_mail.triggered.connect(self.send_mail_pressed)
         
         self.myMail = Mymail()
@@ -29,22 +29,28 @@ class MainUI(QMainWindow):
         if not self.is_read_mail_tab: # check if the tab is created 
             
             
-            
+            """
             self.myMail.get_message_service() 
             self.myMail.get_message_id()
             self.myMail.get_message_payload()
-            self.messages = self.myMail.get_message()
+            self.messages = self.myMail.get_message()"""
             
             self.is_read_mail_tab = True  # Update the flag to indicate the tab is created
             # if not create the table and disable the tab creation
-            self.read_mail_tab = myWidgets.Ui_Form()
-            self.read_mail_tab.setupUi(self, "Read mail.")
-            self.read_mail_tab.closeUI(self.close_read_mail_tab)
-            self.gridLayout.addWidget(self.read_mail_tab.tabWidget, 0,0)
+            """self.read_mail_tab = myWidgets.Ui_Form()
+            self.read_mail_tab.setupUi(self, "Read mail.")"""
             
-            self.get_messages_items()
+            self.read_mail_tab = myWidgets.Ui_mail_reader_form()
+            self.read_mail_tab.setupUi(self)
+            
+            #self.read_mail_tab.closeUI(self.close_read_mail_tab)
+            #self.gridLayout.addWidget(self.read_mail_tab.tabWidget, 0,0)
+            self.gridLayout.addWidget(self.read_mail_tab.main_tab_widget, 0,0)
+
+            
+            """self.get_messages_items()
             self.read_mail_tab.add_mail_list()
-            self.read_mail_tab.list_event()
+            self.read_mail_tab.list_event()"""
             
             """self.read_mail_tab.print_list_items()
             print("Fonction used.")

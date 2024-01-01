@@ -80,12 +80,8 @@ class Mymail :
             try:
                 full_content = message.get("parts")[0]
                 data = full_content["body"]["data"]
-                
                 message_content = base64.urlsafe_b64decode(data.encode('UTF-8'))
-                
-                decoded_content = message_content.decode('utf-8')
-                
-                #print(f"Subject: {subject}, From: {from_user} , content: {message_content}")
+                decoded_content = message_content.decode('utf-8')                
                 message_dic.append({
                     "From": from_user,
                     "Subject": subject,

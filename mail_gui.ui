@@ -27,31 +27,31 @@
    </property>
    <widget class="QMenu" name="menuAction">
     <property name="title">
-     <string>Action</string>
+     <string>Menu</string>
     </property>
-    <addaction name="actionRead_mail"/>
+    <addaction name="Messagerie"/>
     <addaction name="actionSend_mail"/>
    </widget>
    <addaction name="menuAction"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
-  <action name="actionRead_mail">
+  <action name="Messagerie">
    <property name="text">
-    <string>Read mail tab</string>
+    <string>Messagerie</string>
    </property>
    <property name="statusTip">
-    <string>New mail tab reader</string>
+    <string>Accéder à la boîte mail.</string>
    </property>
    <property name="shortcut">
-    <string>Ctrl+R</string>
+    <string>Ctrl+M</string>
    </property>
   </action>
   <action name="actionSend_mail">
    <property name="text">
-    <string>Send mail tab</string>
+    <string>Nouveau message</string>
    </property>
    <property name="statusTip">
-    <string>Send mail tab</string>
+    <string>Envoyer un nouveau message.</string>
    </property>
    <property name="shortcut">
     <string>Ctrl+N</string>
