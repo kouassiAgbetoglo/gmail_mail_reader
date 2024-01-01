@@ -59,6 +59,7 @@ class Mymail :
         self.messages_id = [message["id"] for message in messages_list]
 
     def get_message_payload(self):
+        self.messages_payload.clear()
         for message_id in self.messages_id:
             results = self.messages_service.get(userId="me", id=message_id).execute()
             self.messages_payload.append(results["payload"])
@@ -92,11 +93,9 @@ class Mymail :
                 })
             except:
                 continue
+                        
         return message_dic
     
-    def clear_all(self):
-        self.messages_payload.clear()
-        self.messages_service = None
-        self.messages_id.clear()
+
             
             

@@ -9,15 +9,18 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
-
+from pprint import pp
 
 class Ui_Form(object):
     
     mail_list = []
     content = []
-    subject = []
+    mail_subject = []
     
     def setupUi(self, Form, tab_name):
+
+        
+        
         Form.setObjectName("Form")
         
         self.tabWidget = QtWidgets.QTabWidget(Form)
@@ -68,7 +71,7 @@ class Ui_Form(object):
         
         
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap("refresh_icon.svg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon.addPixmap(QtGui.QPixmap("Images/refresh_icon.svg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.refresh_button.setIcon(icon)
         self.refresh_button.setObjectName("refresh_button")
         self.gridLayout_2.addWidget(self.refresh_button, 0, 0, 1, 1)
@@ -112,7 +115,9 @@ class Ui_Form(object):
     def closeUI(self, action):
         self.tabWidget.tabCloseRequested.connect(action)
         
+        
     def add_mail_list(self):
+        
         self.listWidget.addItems(self.mail_list)
     
     def refreshUI(self, action):
@@ -126,6 +131,11 @@ class Ui_Form(object):
         self.plainTextEdit.clear()
         self.lineEdit.clear()
         self.plainTextEdit.appendHtml(self.content[idx])
-        self.lineEdit.insert(self.subject[idx])
+        self.lineEdit.insert(self.mail_subject[idx])
+        
+    def clear_all(self):
+        self.mail_list = []
+        self.content = []
+        self.mail_subject = []
     
     
