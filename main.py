@@ -3,6 +3,8 @@ from PyQt5.uic import loadUi
 import sys
 import myWidgets
 from google_gmail import Mymail
+from utils import Google_auth
+
 
 class MainUI(QMainWindow):
     
@@ -14,15 +16,12 @@ class MainUI(QMainWindow):
         loadUi("mail_gui.ui", self)        
         self.setFixedSize(535, 380)
         # binding action to menu action to create read and send mail tab
-        self.Messagerie.triggered.connect(self.read_mail_pressed)
+        self.message_action.triggered.connect(self.read_mail_pressed)
         #self.actionSend_mail.triggered.connect(self.send_mail_pressed)
-        
-        self.myMail = Mymail()
-        self.myMail.auth_google()
-        
+        self.auth = Google_auth()
+        self.auth.log()
         
         
-
     # create tab window
     
     def read_mail_pressed(self):

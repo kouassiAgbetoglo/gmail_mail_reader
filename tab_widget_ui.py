@@ -21,6 +21,7 @@ class Ui_mail_reader_form(object):
         self.main_tab_widget.setMaximumSize(QtCore.QSize(780, 400))
         self.main_tab_widget.setStyleSheet("background-color: rgb(255, 255, 255);\n"
 "")
+        self.main_tab_widget.setTabsClosable(True)
         self.main_tab_widget.setObjectName("main_tab_widget")
         self.mail_reader_tab_widget = QtWidgets.QWidget()
         self.mail_reader_tab_widget.setEnabled(True)
@@ -77,7 +78,7 @@ class Ui_mail_reader_form(object):
         self.mail_title_label.setObjectName("mail_title_label")
         self.mail_title_layout.addWidget(self.mail_title_label)
         self.gridLayoutWidget_2 = QtWidgets.QWidget(self.mail_reader_tab_widget)
-        self.gridLayoutWidget_2.setGeometry(QtCore.QRect(100, 10, 21, 21))
+        self.gridLayoutWidget_2.setGeometry(QtCore.QRect(100, 10, 30, 26))
         self.gridLayoutWidget_2.setObjectName("gridLayoutWidget_2")
         self.refresh_button_layout = QtWidgets.QGridLayout(self.gridLayoutWidget_2)
         self.refresh_button_layout.setContentsMargins(0, 0, 0, 0)
@@ -105,4 +106,4 @@ class Ui_mail_reader_form(object):
         mail_reader_form.setWindowTitle(_translate("mail_reader_form", "Form"))
         self.mail_list_label.setText(_translate("mail_reader_form", "E-mail:"))
         self.mail_title_label.setText(_translate("mail_reader_form", "Titre:"))
-        self.main_tab_widget.setTabText(self.main_tab_widget.indexOf(self.mail_reader_tab_widget), _translate("mail_reader_form", "Messagerie"))
+        self.main_tab_widget.setTabText(self.main_tab_widget.indexOf(self.mail_reader_tab_widget), _translate("mail_reader_form", "Tab 1"))

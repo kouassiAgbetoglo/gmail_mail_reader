@@ -13,8 +13,12 @@
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
-  <widget class="QWidget" name="centralwidget">
-   <layout class="QGridLayout" name="gridLayout"/>
+  <widget class="QWidget" name="main_home_widget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <layout class="QHBoxLayout" name="horizontalLayout"/>
+    </item>
+   </layout>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
@@ -29,13 +33,14 @@
     <property name="title">
      <string>Menu</string>
     </property>
-    <addaction name="Messagerie"/>
-    <addaction name="actionSend_mail"/>
+    <addaction name="message_action"/>
+    <addaction name="new_message_action"/>
+    <addaction name="actionSe_connecter"/>
    </widget>
    <addaction name="menuAction"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
-  <action name="Messagerie">
+  <action name="message_action">
    <property name="text">
     <string>Messagerie</string>
    </property>
@@ -46,7 +51,7 @@
     <string>Ctrl+M</string>
    </property>
   </action>
-  <action name="actionSend_mail">
+  <action name="new_message_action">
    <property name="text">
     <string>Nouveau message</string>
    </property>
@@ -55,6 +60,11 @@
    </property>
    <property name="shortcut">
     <string>Ctrl+N</string>
+   </property>
+  </action>
+  <action name="actionSe_connecter">
+   <property name="text">
+    <string>Se connecter</string>
    </property>
   </action>
  </widget>

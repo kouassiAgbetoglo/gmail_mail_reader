@@ -149,6 +149,7 @@ class Ui_mail_reader_form(object):
         self.main_tab_widget.setStyleSheet("background-color: rgb(255, 255, 255);\n"
 "")
         self.main_tab_widget.setObjectName("main_tab_widget")
+        self.main_tab_widget.setTabsClosable(True)
         self.mail_reader_tab_widget = QtWidgets.QWidget()
         self.mail_reader_tab_widget.setEnabled(True)
         self.mail_reader_tab_widget.setObjectName("mail_reader_tab_widget")

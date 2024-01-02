@@ -29,6 +29,9 @@
      <property name="currentIndex">
       <number>0</number>
      </property>
+     <property name="tabsClosable">
+      <bool>true</bool>
+     </property>
      <widget class="QWidget" name="mail_reader_tab_widget">
       <property name="enabled">
        <bool>true</bool>
@@ -144,8 +147,8 @@
         <rect>
          <x>100</x>
          <y>10</y>
-         <width>21</width>
-         <height>21</height>
+         <width>30</width>
+         <height>26</height>
         </rect>
        </property>
        <layout class="QGridLayout" name="refresh_button_layout">
